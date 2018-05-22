@@ -1,0 +1,53 @@
+
+<zk>		
+	<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+<div apply="org.zkoss.essentials.gm.GoogleMapsController">
+	<!-- define the property 'zk.googleAPIkey' (or any other name) 
+		 as a ZK-library-property, VM-arg or system-property 
+		 or simply add your APIkey inline instead of ${c:property...} -->
+	<!-- <script type="text/javascript" content="zk.googleAPIkey='your-google-API-key'" /> -->
+	<script type="text/javascript" content="zk.googleAPIkey='AIzaSyDozhZ_blR8SxTWMIS8YfVAJVoej4Ra3F4'" />
+ 	
+ 	<gmaps version="3.25" id="gmaps" width="520px" height="400px" showSmallCtrl="true" protocol="https">
+		<ginfo id="info" open="true" 
+			content="Hi, PMBP!"/>
+		<gmarker id="marker" lat="55.7535991" lng="37.6225" 
+			content="Hello, PMBP!"/>
+	</gmaps>
+</div>
+
+	
+	<grid apply="org.zkoss.essentials.gm.GoogleMapsConfigController">
+		
+		
+		<rows>
+		<row>
+							<cell sclass="row-title">Resource</cell>
+							<cell>
+								<radiogroup id="selectedResource">
+									
+										<radio label="Resource1" id="resource1"/>	
+										<radio label="Resource2" id="resource2"/>
+									
+								</radiogroup>
+							</cell>
+						</row>
+			<row>
+				<label value="Latitude:" />
+				<doublebox id="latitude" hflex="1" />
+			</row>
+			<row>
+				<label value="Longitude:" /> 
+				<doublebox id="longitude" hflex="1" />
+			</row>
+			<row>
+				<label value="Zoom Level:" /> 
+				<intbox id="zoom" hflex="1" />
+			</row>
+			<row>
+				<label value="Open Info:" />
+				<button id="toggleInfo" label="Toggle Info" hflex="1" />
+			</row>
+		</rows>
+	</grid>
+</zk>

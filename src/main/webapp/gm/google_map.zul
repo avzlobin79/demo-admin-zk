@@ -1,0 +1,14 @@
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+<div apply="org.zkoss.essentials.gm.GoogleMapsController">
+	<!-- define the property 'zk.googleAPIkey' (or any other name) 
+		 as a ZK-library-property, VM-arg or system-property 
+		 or simply add your APIkey inline instead of ${c:property...} -->
+	<!-- <script type="text/javascript" content="zk.googleAPIkey='your-google-API-key'" /> -->
+	<script type="text/javascript" content="zk.googleAPIkey='AIzaSyDozhZ_blR8SxTWMIS8YfVAJVoej4Ra3F4'" />
+ 	<gmaps lat="55.7535991" lng="37.6225"  version="3.26" id="gmaps" width="520px" height="400px" showSmallCtrl="true" protocol="https">
+		<ginfo id="info" open="true" 
+			content="Hi, PMBP!"/>
+		<gmarker id="marker" lat="55.7535991" lng="37.6225" 
+			content="Hello, &lt;a href=&quot;http://www.zkoss.org&quot;&gt;ZK&lt;/a&gt; on top of Gmarker."/>
+	</gmaps>
+</div>
